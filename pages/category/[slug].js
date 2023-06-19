@@ -1,24 +1,19 @@
 import ProductCard from "@/components/molecules/ProductCard";
-import MainBanner from "@/components/organism/MainBanner";
 import Wrapper from "@/components/organism/Wrapper";
+import { useRouter } from "next/router";
+import React from "react";
 
-export default function Home() {
+const Category = () => {
+  const router = useRouter();
+  const { slug } = router.query;
   return (
-    <main className="h-full">
-      <MainBanner />
+    <div className="w-full md:py-10">
       <Wrapper>
-        {/* Heading dan paragraph start */}
-        <div className="text-center max-w-[800px] mx-auto my-12 md:my-20">
-          <h2 className="text-2xl md:text-4xl mb-5 font-semibold">
-            Bantalan Optimal untuk Lari Jarak Jauh
-          </h2>
-          <p className="text-sm md:text-xl">
-            Midsole Nike ZoomX yang ringan dikombinasikan dengan tinggi tumpukan
-            yang lebih besar untuk memberikan bantalan optimal saat melakukan
-            lari jarak jauh yang memanjang.
-          </p>
+        <div className="text-center max-w-[800px] mx-auto mt-8 md:mt-10">
+          <h1 className="text-2xl md:text-3xl mb-5 font-semibold leading-tight">
+            Running Shoes
+          </h1>
         </div>
-        {/* End */}
 
         {/* product start */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 my-14 px-5 md:px-0">
@@ -55,6 +50,8 @@ export default function Home() {
         </div>
         {/* End */}
       </Wrapper>
-    </main>
+    </div>
   );
-}
+};
+
+export default Category;

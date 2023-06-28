@@ -5,7 +5,7 @@ import { NumericFormat } from "react-number-format";
 const ProductCard = ({ imgProduct, price, title }) => {
   return (
     <Link
-      href="/product/jordan"
+      href="/product/sneakers"
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
       <img src={imgProduct} alt="produk" className="w-full rounded-2xl" />

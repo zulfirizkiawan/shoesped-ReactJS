@@ -11,7 +11,7 @@ const data = [
 
 const subMenuData = [
   { id: 1, name: "Jordan", doc_count: 11 },
-  { id: 2, name: "Sneakers", doc_count: 8 },
+  { id: 2, name: "Sneakers", doc_count: 8, url: "category/sneakers" },
   { id: 3, name: "Running shoes", doc_count: 64 },
   { id: 4, name: "Football shoes", doc_count: 107 },
 ];
@@ -37,7 +37,7 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                       return (
                         <Link
                           key={submenu.id}
-                          href="/"
+                          href={"/" + submenu.url}
                           onClick={() => setShowCatMenu(false)}
                         >
                           <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">

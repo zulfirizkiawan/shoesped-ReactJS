@@ -50,9 +50,11 @@ const Cart = () => {
               </div>
             </div>
 
-            <button className="w-full py-4 mt-8 rounded-full bg-black text-white text-lg font-medium transition active:scale-95 mb-3 hover:opacity-75">
-              Checkout
-            </button>
+            <Link href="/success">
+              <button className="w-full py-4 mt-8 rounded-full bg-black text-white text-lg font-medium transition active:scale-95 mb-3 hover:opacity-75">
+                Checkout
+              </button>
+            </Link>
           </div>
         </div>
         {/* Cart content end */}
